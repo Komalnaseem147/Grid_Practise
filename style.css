@@ -1,0 +1,45 @@
+:root{
+    --width:250px;
+    --radius: 30px;
+    --rowinc: 10px;
+    --small: 26;
+    --medium: 33;
+    --large: 45;  
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+}
+
+.container{
+   width: 80vw;
+   position: absolute;
+   left: 50%;
+   transform: translate(-50%);
+   display: grid;
+   grid-template-columns: repeat(auto-fill, var(--width));
+   grid-auto-rows: var(--rowinc);
+   justify-content: center;
+   background-color: black;
+}
+
+.card{
+    margin: 15px 10px;
+    border-radius: var(--radius);
+    background-color: red;
+}
+
+.card_small{
+    grid-row-end: span var(--small);
+}
+
+.card_medium{
+    grid-row-end: span var(--medium);
+}
+
+.card_large{
+    grid-row-end: span var(--large);
+}
+
